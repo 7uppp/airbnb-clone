@@ -27,12 +27,12 @@ const RegisterModal = () => {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true)
     axios
-      .post('/api/register,data')
+      .post('/api/register', data)
       .then(() => {
         registerModal.onClose()
       })
       .catch((error) => {
-        toast.error('Somthing went wrong! Please try again later.')
+        toast.error('Something went wrong! Please try again later.')
       })
       .finally(() => {
         setIsLoading(false)

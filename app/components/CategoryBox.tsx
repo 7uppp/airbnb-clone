@@ -1,3 +1,4 @@
+'use client'
 import { IconType } from 'react-icons'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useCallback } from 'react'
@@ -24,6 +25,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     // 如果params存在，使用qs库将其解析为对象
     if (params) {
       currentQuery = qs.parse(params.toString())
+      console.log(currentQuery)
     }
     // 更新currentQuery中的category参数为新的label值
     const updatedQuery: any = {
